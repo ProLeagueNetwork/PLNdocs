@@ -1,7 +1,6 @@
-# PLNdocs
-Documentation for Pro League Network
+# PLN Wagering API Documentation
 
-## General Wagering Information
+## General Information
 
 Lines are partitioned by tournament, and each document has:
 - `tournamentId`: Unique UUID (string)
@@ -88,3 +87,52 @@ The detailed schema definitions for the models referenced in this documentation 
 - InputTournamentLine
 
 Please refer to the swagger generated JSON file [here](https://plnapi-prod.azurewebsites.net/swagger/) for complete details on each model.
+
+# World Putting League Specifics:
+
+## WPL Market Types
+
+Market ID "001":
+- Description: Outright Winner
+  - Format: "FirstName LastName Outright Winner"
+
+Market ID "002":
+- Description: H2H Moneyline
+  - Format: "Moneyline FirstName LastName (FirstName LastName v FirstName LastName)"
+
+Market ID "003":
+- Description: Over/Under (Hole in one, par, bogey, etc.)
+  - Format: "{Over/Under} {line} {stroke type} round {round number} hole {hole number}: {subject}"
+
+### Over/Under
+- **Allowed Values**: `Over`, `Under`
+- **Description**: Indicates whether the bet is over or under the specified line.
+
+### Line
+- **Allowed Values**: Any positive number (integer or decimal).
+- **Examples**: `0.5`, `1`, `2.5`
+- **Description**: The specific amount of the stroke type that you are betting over or under on.
+
+### Stroke Type
+- **Allowed Values**: Any text describing the bet type.
+- **Examples**: `HIO`, `pars`, `bogey`, `minutes to play hole 2`, `fist pumps`
+- **Description**: The type of bet being placed. This can be any descriptive text.
+
+### Round Number
+- **Allowed Values**:
+  - Single round: Any positive integer (e.g., `1`, `2`).
+  - Multiple rounds: A list of positive integers enclosed in square brackets (e.g., `[1,2,3]`).
+  - All rounds: `-1`
+- **Description**: The round or rounds the bet applies to.
+
+### Hole Number
+- **Allowed Values**:
+  - Single hole: Any positive integer between 1 and 18 (e.g., `1`, `4`).
+  - Multiple holes: A list of integers between 1 and 18 enclosed in square brackets (e.g., `[3,4,8]`).
+  - All holes: `-1`
+- **Description**: The hole or holes the bet applies to.
+
+### Subject
+- **Allowed Values**: Any text representing the subject of the bet.
+- **Examples**: `Joey Graybeal`, `Olivia Prokopova`, `Field`
+- **Description**: The name or identifier of the subject of the bet.
