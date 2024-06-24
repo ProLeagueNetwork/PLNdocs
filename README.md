@@ -154,7 +154,7 @@ Market ID "002":
     - **{FirstName LastName}**
        - **Allowed Values**: At least one word for each name and two required names: one before the "v" and one after
        - **Description**: Names of the two people fighting in this bout
-       - **Regex Pattern**: ```^KO/TKO (Yes|No) \((.+?) v (.+?)\)$```
+    - **Regex Pattern**: ```^KO/TKO (Yes|No) \((.+?) v (.+?)\)$```
 
 Market ID "003":
 - Description: Over/Under (Rounds, penalties, slaps, etc.)
