@@ -136,3 +136,41 @@ Market ID "003":
 - **Allowed Values**: Any text representing the subject of the bet.
 - **Examples**: `Joey Graybeal`, `Olivia Prokopova`, `Field`
 - **Description**: The name or identifier of the subject of the bet.
+
+# Slapfight Championship Specifics:
+
+## SFC Market Types
+
+Market ID "001":
+- Description: Outright Winner
+  - Format: "Moneyline FirstName LastName (FirstName LastName v FirstName LastName)"
+
+Market ID "002":
+- Description: KO/TKO
+  - Format: "KO/TKO {Yes/No} ({FirstName LastName} v {FirstName LastName})"
+    - **Yes/No**
+       - **Allowed Values**: `Yes`, `No`
+       - **Description**: Indicates whether the bet is yes, fight to end in KO/TKO or no, the fight will not end in KO/TKO
+    - **{FirstName LastName}**
+       - **Allowed Values**: At least one word for each name and two required names: one before the "v" and one after
+       - **Description**: Names of the two people fighting in this bout
+       - **Regex Pattern**: ```^KO/TKO (Yes|No) \((.+?) v (.+?)\)$```
+
+Market ID "003":
+- Description: Over/Under (Rounds, penalties, slaps, etc.)
+  - Format: "{Over/Under} {line} {Bet Subject} ({FirstName LastName} v {FirstName LastName})"
+    - **Over/Under**
+       - **Allowed Values**: `Over`, `Under`
+       - **Description**: Indicates whether the bet is over or under the specified line.
+    - **Line**
+       - **Allowed Values**: Any positive number (integer or decimal).
+       - **Examples**: `0.5`, `1`, `2.5`
+       - **Description**: The specific amount of the bet_subject that you are betting over or under on.
+    - **Bet Subject**
+       - **Allowed Values**: Any text describing the bet type.
+       - **Examples**: `rounds`, `slaps`, `stepping penalties`, `minutes`, `fist pumps`
+       - **Description**: The type of bet being placed. This can be any descriptive text.
+    - **{FirstName LastName}**
+       - **Allowed Values**: At least one word for each name and two required names: one before the "v" and one after
+       - **Description**: Names of the two people fighting in this bout
+    - **Regex Pattern**: ```^(Over|Under) (\d+\.\d+|\d+) (.+?) \((.+?) v (.+?)\)$```
