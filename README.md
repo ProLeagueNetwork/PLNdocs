@@ -88,9 +88,9 @@ The detailed schema definitions for the models referenced in this documentation 
 
 Please refer to the swagger generated JSON file [here](https://plnapi-prod.azurewebsites.net/swagger/) for complete details on each model.
 
-# World Putting League Specifics:
+# Putt Tour Specifics:
 
-## WPL Market Types
+## Putt Tour Market Types
 
 Market ID "001":
 - Description: Outright Winner
