@@ -164,7 +164,11 @@ Visit the appropriate Swagger UI endpoint to explore available endpoints:
 - **Internal API:** `https://api.proleaguenetwork.com/internal/docs/`
 - **Admin API:** `https://api.proleaguenetwork.com/admin/docs/`
 
-### 3. Test Your First Request
+### 3. Credentials:
+
+https://docs.google.com/document/d/1fInixNm-vMKe649MbhMGCb6xPWh8-vA6ASzxXLPxbgM/edit?tab=t.0
+
+### 4. Test Your First Request
 
 **Example: Get all tournaments (Client API)**
 ```bash
