@@ -302,25 +302,6 @@ X-RateLimit-Reset: 1642252800
 
 ---
 
-## 📞 Support & Contact
-
-### General Support
-- **Email:** support@pln.com
-- **Documentation:** https://docs.pln.com
-
-### Internal API Issues
-- **Email:** tech-team@pln.com
-
-### Admin Access & Permissions
-- **Email:** admin@pln.com
-
-### Migration Assistance
-For help migrating from Legacy API to role-based endpoints:
-- **Email:** support@pln.com
-- **Subject:** "API Migration Assistance"
-
----
-
 ## 🗺️ Roadmap & Migration
 
 ### Current Status (January 2026)
